@@ -1,6 +1,6 @@
 {
   "plugins": [
-    "react"
+    "vue"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
@@ -15,10 +15,6 @@
     "es6": true
   },
   "rules": {
-    "react/jsx-no-undef": 2,
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "no-unused-vars": 2,
-    "prefer-const": 2
+    "vue/no-invalid-v-if": "error"
   }
 }
