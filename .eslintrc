@@ -11,10 +11,9 @@
   },
   "env": {
     "browser": true,
-    "node": true,
     "es6": true
   },
   "rules": {
-    "vue/no-invalid-v-if": "error"
+    "vue/jsx-uses-vars": 2
   }
 }
