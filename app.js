@@ -13,12 +13,17 @@ var port = process.env.PORT || 3000;
 var parseUrlEncoded = bodyParser.urlencoded({ extended: false });
 
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static('./public'));
 
 // set the home page route
 app.use(require('./controllers'));
+
+// set 404 in case of not found
+app.use(function(req, res) {
+  res.status(404).send('');
+});
 
 app.listen(port);
