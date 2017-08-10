@@ -1,29 +1,32 @@
-#app {
-  height: 100vh;
-  width: 100vw;
-  background-color: #f0f0f0;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 .frame {
-    font-family: 'Work Sans';
+    font-family: 'Courier';
+    background-color: rgb(238,255,65);
     background-color: rgba(238,255,65,.4);
     border: 1px solid #cccfa0;
-    white-space: nowrap;
+    white-space: pre-wrap;
     padding: 4px;
     position: relative;
     border-radius: 5px;
-    min-height: 70px;
+    min-height: 150px;
     margin-top: 40px;
     font-size: 1.25em;
+    overflow: hidden;
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
 }
 
-.frame span {
-    display: block;
-    float: left;
+.frame div {
+  display: inline-block;
+}
+
+.frame div span {
+  display: inline-block;
+}
+
+.textarea {
+  position: absolute;
+  left: -999px;
 }
 
 .current {
@@ -36,4 +39,65 @@
 
 .error{
     color: red;
+}
+
+.empty-error {
+  background-color: red;
+}
+
+.excerpt-container {
+  position: relative;
+}
+
+.stats-overlay {
+  /*position: fixed; /* Sit on top of the page content */
+  position: absolute; /* Sit on top of the parent container */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 5px;
+}
+
+.stats-overlay .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: white;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
+}
+
+.stats-overlay .text p {
+  text-align: center;
+}
+
+button {
+  margin: 15px;
+  margin-left: 0;
+}
+
+.book-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.book-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.book-container a {
+  display: block;
+  margin: 15px;
 }
