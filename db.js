@@ -1,5 +1,3 @@
-// db.js
-
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://yourDatabaseURI');
+mongoose.connect('mongodb://localhost/typingfrombooks');
