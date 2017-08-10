@@ -1,5 +1,5 @@
 {
-  "name": "typingfrombooks",
+  "name": "typing-from-books",
   "version": "0.1.0",
   "description": "Fun typing from books excerpts",
   "main": "app.js",
@@ -12,28 +12,29 @@
     "url": "https://github.com/hicaro/typing-from-books.git"
   },
   "keywords": [
-    "typingfrombooks",
-    "funtyping"
+    "typing-from-books",
+    "fun-typing"
   ],
   "author": "Hicaro Adriano",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "body-parser": "^1.16.1",
     "ejs": "^2.5.6",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "lodash": "^4.17.4",
+    "vue": "^2.4.2"
   },
   "engines": {
     "node": "4.8.4"
   },
   "devDependencies": {
-    "axios": "^0.16.2",
     "babel-core": "^6.23.1",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-vue": "^1.0.2",
     "babel-register": "^6.23.0",
     "babelify": "^7.3.0",
     "bootstrap": "^3.3.7",
-    "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "eslint": "^4.3.0",
     "eslint-plugin-vue": "^2.1.0",
@@ -42,10 +43,9 @@
     "gulp-eslint": "^3.0.1",
     "gulp-if-else": "^1.0.3",
     "gulp-uglify": "^2.0.1",
-    "lodash": "^4.17.4",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "vue": "^2.4.2",
+    "vueify": "^9.4.1",
     "watchify": "^3.9.0"
   }
 }
