@@ -1,10 +1,11 @@
-"use strict"
+"use strict";
 
 import gulp from "gulp";
 import browserify from "browserify";
 import source from "vinyl-source-stream";
 import buffer from "vinyl-buffer";
 import eslint from "gulp-eslint";
+import vueify from "vueify";
 import exorcist from "exorcist";
 import watchify from "watchify";
 import babelify from "babelify";
@@ -16,9 +17,10 @@ watchify.args.debug = true;
 var bundler = browserify("public/js/src/index.js", watchify.args);
 
 // Babel transform
-bundler.transform(babelify.configure({
-    sourceMapRelative: 'js'
-}));
+bundler.transform(babelify);
+
+// Vue transform
+bundler.transform(vueify);
 
 // On updates recompile
 bundler.on('update', bundle);
@@ -43,8 +45,9 @@ gulp.task('transpile', ['lint'], () => bundle());
 gulp.task('lint', () => {
     return gulp.src(['public/js/src/**/*.js', 'gulpfile.babel.js'])
       .pipe(eslint())
-      .pipe(eslint.format())
+      .pipe(eslint.format());
 });
 
-
-
+gulp.task('watch', ['transpile'], () => {
+  gulp.watch('public/js/src/**/*', ['transpile']);
+});
