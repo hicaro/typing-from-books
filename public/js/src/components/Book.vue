@@ -1,6 +1,9 @@
 <template>
   <div class="book-container">
-    <img alt="" :src="image" />
+    <a target="_blank" :href="url">
+      <img alt="" :src="image" />
+    </a>
+
     <a target="_blank" :href="url">{{title}}</a>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">

@@ -19496,7 +19496,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"book-container"},[_c('img',{attrs:{"alt":"","src":_vm.image}}),_vm._v(" "),_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-md-offset-3"},[_c('q',[_vm._v("\n        "+_vm._s(_vm.promo)+"\n      ")])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"book-container"},[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_c('img',{attrs:{"alt":"","src":_vm.image}})]),_vm._v(" "),_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-md-offset-3"},[_c('q',[_vm._v("\n        "+_vm._s(_vm.promo)+"\n      ")])])])])}
 __vue__options__.staticRenderFns = []
 __vue__options__._scopeId = "data-v-257f70c5"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
