@@ -1,4 +1,10 @@
 import Vue from 'vue/dist/vue.js';
-import axios from 'axios';
-import _ from 'lodash';
+import App from './App.vue';
 
+var app = new Vue({
+  el: '#app',
+  template: '<App/>',
+  components: {
+    App
+  }
+});
