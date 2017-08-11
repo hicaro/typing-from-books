@@ -1,61 +1,5 @@
 <template>
   <div id="app">
-    <div class="header">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="header-content">
-            <div class="col-md-6">
-              <div class="header-title-content">
-                <div class="site-logo">
-                  <a href="/" title="">
-                    <img class="site-logo" src="images/logo.png" alt="">
-                  </a>
-                </div>
-
-                <div class="site-title">
-                  <h1 class=""> Typing From Books </h1>
-                  <h3 class="">Fun typing with continuous learning!</h3>
-                </div>
-
-                <div class="clearfix">
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <!--<div class="access-content">
-                <ul>
-                  <li class="current-item">
-                    <a href="01-home-v1.html" title="">Home</a>
-                  </li>
-                  <li>
-                    <a href="#" title="">Pages</a>
-                  </li>
-                </ul>
-              </div>-->
-            </div>
-
-            <div class="col-md-2">
-              <!--<div class="member">
-                <span class="sign_in">
-                  <a class="sign_button tab_link_button" href="#sign_in" title="">Sign in</a>
-                </span>
-                <span class="register">
-                  <a class="sign_button tab_link_button" href="#register" title="">Register</a>
-                </span>
-              </div>-->
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
     <div class="container" >
       <div class="row">
         <div class="col-md-12">
@@ -68,32 +12,33 @@
             <div class="stats-overlay" v-if="finished">
               <div class="text">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <p class="">WPM</p>
                     <p class="">{{wpm}}</p>
                   </div>
-                  <div class="col-md-4">
-                    <p class="">Time</p>
+                  <div class="col-sm-4">
+                    <p class="">Time <i class="fa fa-clock-o"></i></p>
                     <p class="">{{timeReport}}</p>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-sm-4">
                     <p class="">Accuracy</p>
                     <p class="">{{accuracy}} %</p>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
 
-          <div class="row">
-            <button class="button pull-right" @click="fetchExcerpt">Practice new excerpt</button>
-            <button class="button pull-right" @click="reset">Reset</button>
+          <div class="button-container">
+            <button title="reset" class="btn btn-default btn-circle btn-lg waves-effect" @click="reset">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <button title="Load new excerpt" class="btn btn-default btn-circle btn-lg waves-effect" @click="fetchExcerpt">
+              <i class="fa fa-refresh"></i>
+            </button>
           </div>
 
-          <div class="row">
-            <book :title="title" :url="url" :image="image" :promo="promo" :author="author"></book>
-          </div>
+          <book :title="title" :url="url" :image="image" :promo="promo" :author="author"></book>
         </div>
       </div>
     </div>
@@ -171,6 +116,7 @@
           });
       },
       onKeyPress: function (event) {
+
         let id = this.charAt;
         let element = document.getElementById(id);
 
@@ -236,6 +182,4 @@
   }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
