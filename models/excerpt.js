@@ -3,6 +3,7 @@ var db = require('../db');
 var mongoose  = require('mongoose');
 var Schema    = new mongoose.Schema({
   title: String,
+  author: String,
   url: String,
   image: String,
   promo: String,

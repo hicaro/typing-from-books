@@ -12,6 +12,7 @@ router.get('/', function(req, res){
         letters: "",
         length: 0,
         title: "",
+        author: "",
         url: "",
         image: "",
         promo: ""
@@ -22,6 +23,7 @@ router.get('/', function(req, res){
       letters: excerpt.text.split(''),
       length: excerpt.text.length,
       title: excerpt.title,
+      author: excerpt.author,
       url: excerpt.url,
       image: excerpt.image,
       promo: excerpt.promo
