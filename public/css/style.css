@@ -1,27 +1,152 @@
+#app {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f6f9f8;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  background: #fff;
+  min-height: 85px;
+  border-bottom: 1px solid #c6c6c6;
+  -moz-box-shadow: 0 1px 3px #e5e5e4;
+  -webkit-box-shadow: 0 1px 3px #e5e5e4;
+  box-shadow: 0 1px 3px #e5e5e4;
+}
+
+.header .header-content .header-title-content {
+  padding: 12px 2px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.header .site-logo {
+  width: 100px;
+  height: 97px;
+  display: inline-block;
+}
+
+.header .site-logo a {
+  text-decoration: none;
+  color: #434B56;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header .site-logo img {
+  border: none;
+  opacity: .5;
+}
+
+.header .site-title {
+  display: inline-block;
+  width: 70%;
+  padding-left: 10px;
+  vertical-align: top;
+  font-family: 'Changa One', cursive;
+}
+
+.header .site-title h1 {
+  color: #444;
+  font-size: 35px;
+  margin: 20px 0 0 0;
+}
+
+.header .site-title h3 {
+  font-size: 18px;
+  color: #444;
+  margin: 5px 0 0 1px;
+  font-weight: 300;
+}
+
+.header .access-content {
+  padding: 35px 0 15px;
+}
+
+.header .access-content ul {
+  list-style: none;
+}
+
+.header .access-content li {
+  float: left;
+  position: relative;
+  margin-right: 5px;
+}
+
+.header .access-content li a {
+  padding: 7px 10px;
+  text-decoration: none;
+}
+
+.header .access-content li.current-item a {
+  background-color: rgb(51, 122, 183);
+  background-color: rgba(51, 122, 183, 1);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.header .access-content li a:hover {
+  background-color: rgb(238, 238, 238);
+  background-color: rgba(238, 238, 238, 1);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #434B56;
+}
+
+.header .member {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.header .member span a {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  display: block;
+  font-size: 13px;
+  float: right;
+  background: #7a7f88;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+
+.header .member span a:hover {
+  background-color: rgb(238, 238, 238);
+  background-color: rgba(238, 238, 238, 1);
+  color: #434B56;
+}
 
 .frame {
-    font-family: 'Courier';
-    background-color: rgb(238,255,65);
-    background-color: rgba(238,255,65,.4);
-    border: 1px solid #cccfa0;
-    white-space: pre-wrap;
-    padding: 4px;
-    position: relative;
-    border-radius: 5px;
-    min-height: 150px;
-    margin-top: 40px;
-    font-size: 1.25em;
-    overflow: hidden;
-    -moz-appearance: textfield-multiline;
-    -webkit-appearance: textarea;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,1);
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  min-height: 150px;
+  margin-top: 40px;
+  font-size: 1.5em;
+  overflow: hidden;
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
 }
 
-.frame div {
-  display: inline-block;
-}
-
-.frame div span {
-  display: inline-block;
+.frame span {
+  color: #404040;
 }
 
 .textarea {
@@ -34,15 +159,16 @@
 }
 
 .correct {
-    color: #20a080;
+    color: #20a080 !important;
 }
 
 .error{
-    color: red;
+    color: red !important;
 }
 
 .empty-error {
-  background-color: red;
+  background-color: rgb(255,0,0);
+  background-color: rgba(255,0,0,.4);
 }
 
 .excerpt-container {
@@ -89,15 +215,128 @@ button {
 
 .book-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
+  background-color: #fff;
 }
 
-.book-container img {
-  display: block;
-  margin: 0 auto;
+.book-container .book-details {
+  border: solid 1px #CCC;
+  padding: 10px 20px 10px 10px;
 }
 
-.book-container a {
-  display: block;
-  margin: 15px;
+.book-container .book-details .book-thumb {
+  float: left;
+  width: 30%;
+}
+
+.book-container .book-details .book-thumb a {
+  overflow: hidden;
+  width: 100%;
+}
+
+.book-container .book-details .book-thumb a img {
+  float: left;
+  width: 100%;
+}
+
+.book-container .book-details .book-text {
+  float: right;
+  width: 70%;
+  padding-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.book-container .book-details .book-text h2 {
+  color: #262626;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: inherit;
+  line-height: 26px;
+  text-overflow: ellipsis;
+  margin: 20px 0 10px 0;
+}
+
+.book-container .book-details .book-text h4 {
+  line-height: 1.2;
+  font-size: 16px;
+  margin: 0 0 10px;
+  clear: none;
+  color: #262626;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+.book-container .book-details .book-text p::first-letter {
+  text-transform: uppercase;
+}
+
+.book-container .book-details .book-text p {
+  color: #424242;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  letter-spacing:0.1em;
+  text-align:center;
+  margin: 30px auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: 13pt;
+  font-variant: small-caps;
+}
+
+.book-container .book-details .amazon {
+  float: left;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.book-container .book-details .amazon h3 {
+  float: left;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.book-container .book-details .amazon a {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.book-container .book-details .block-quote {
+  margin: 0;
+  font-weight: 300;
+  padding-left: 20px;
+  position: relative;
+  text-align: left;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.book-container .book-details .block-quote:before {
+  font: normal normal normal 24px/1 FontAwesome;
+  position: absolute;
+  left: 2px;
+  right: 0;
+  display: inline-block;
+  text-align: left;
+  content: "\201c";
+  font-size: 50px;
+  line-height: 57px;
+  color: rgb(213, 214, 214);
+  color: rgba(213, 214, 214, 0.8);
+}
+
+.set:not(:last-child) {
+  border-bottom: 1px dotted #aaa;
+}
+
+.button {
+  display: inline-block;
+  min-width: 110px;
+  margin: 15px 5px;
+  padding: 10px 15px 12px;
+  font: 700 12px/1 'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0,0,0,.1), inset 0 -10px 20px rgba(0,0,0,.1);
+  cursor: pointer;
 }

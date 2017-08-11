@@ -1,12 +1,64 @@
 <template>
   <div id="app">
+    <div class="header">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="header-content">
+            <div class="col-md-6">
+              <div class="header-title-content">
+                <div class="site-logo">
+                  <a href="/" title="">
+                    <img class="site-logo" src="images/logo.png" alt="">
+                  </a>
+                </div>
+
+                <div class="site-title">
+                  <h1 class=""> Typing From Books </h1>
+                  <h3 class="">Fun typing with continuous learning!</h3>
+                </div>
+
+                <div class="clearfix">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <!--<div class="access-content">
+                <ul>
+                  <li class="current-item">
+                    <a href="01-home-v1.html" title="">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" title="">Pages</a>
+                  </li>
+                </ul>
+              </div>-->
+            </div>
+
+            <div class="col-md-2">
+              <!--<div class="member">
+                <span class="sign_in">
+                  <a class="sign_button tab_link_button" href="#sign_in" title="">Sign in</a>
+                </span>
+                <span class="register">
+                  <a class="sign_button tab_link_button" href="#register" title="">Register</a>
+                </span>
+              </div>-->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
     <div class="container" >
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h1>Typing From Books</h1>
-          <p>
-             Learn new facts and make your ming wander while practicing your typing!
-          </p>
+        <div class="col-md-12">
 
           <div @click="returnFocus" class="excerpt-container">
 
@@ -35,12 +87,12 @@
           </div>
 
           <div class="row">
-            <button class="btn btn-primary pull-right" @click="fetchExcerpt">Practice new excerpt</button>
-            <button class="btn btn-primary pull-right" @click="reset">Reset</button>
+            <button class="button pull-right" @click="fetchExcerpt">Practice new excerpt</button>
+            <button class="button pull-right" @click="reset">Reset</button>
           </div>
 
           <div class="row">
-            <book :title="title" :url="url" :image="image" :promo="promo"></book>
+            <book :title="title" :url="url" :image="image" :promo="promo" :author="author"></book>
           </div>
         </div>
       </div>
@@ -63,7 +115,7 @@
       return {
         chars: [],
         length: 0,
-        status: [], // has type status for each letter
+        status: [], // has typing status for each letter
         wordCount: 0,
         charAt: 0,
         startTime: 0,
@@ -76,7 +128,8 @@
         title: "",
         url: "",
         image: "",
-        promo: ""
+        promo: "",
+        author: ""
       }
     },
     computed: {
@@ -106,6 +159,7 @@
               $this.length  = response.data.length;
 
               $this.title   = response.data.title;
+              $this.author  = response.data.author;
               $this.url     = response.data.url;
               $this.image   = response.data.image;
               $this.promo   = response.data.promo;
@@ -183,19 +237,5 @@
 </script>
 
 <style scoped>
-  #app {
-    height: 100vh;
-    width: 100vw;
-    background-color: #f8f8f8;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  h1{
-    text-align: center;
-  }
-  p{
-    text-align: center;
-  }
+
 </style>
