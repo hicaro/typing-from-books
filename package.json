@@ -37,6 +37,7 @@
     "babelify": "^7.3.0",
     "bootstrap": "^3.3.7",
     "browserify": "^14.1.0",
+    "envify": "^4.1.0",
     "eslint": "^4.3.0",
     "eslint-plugin-vue": "^2.1.0",
     "exorcist": "^0.4.0",

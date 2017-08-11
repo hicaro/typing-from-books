@@ -2,6 +2,7 @@
 
 import gulp from "gulp";
 import browserify from "browserify";
+import envify from "envify";
 import source from "vinyl-source-stream";
 import buffer from "vinyl-buffer";
 import eslint from "gulp-eslint";
@@ -18,6 +19,9 @@ var bundler = browserify("public/js/src/index.js", watchify.args);
 
 // Babel transform
 bundler.transform(babelify);
+
+// Envify transform
+bundler.transform(envify);
 
 // Vue transform
 bundler.transform(vueify);
