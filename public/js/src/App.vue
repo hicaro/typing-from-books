@@ -13,7 +13,7 @@
               <div class="text">
                 <div class="row">
                   <div class="col-sm-4">
-                    <p class="">WPM</p>
+                    <p class="">WPM <i class="fa fa-check-square-o"></i></p>
                     <p class="">{{wpm}}</p>
                   </div>
                   <div class="col-sm-4">
@@ -21,7 +21,7 @@
                     <p class="">{{timeReport}}</p>
                   </div>
                   <div class="col-sm-4">
-                    <p class="">Accuracy</p>
+                    <p class="">Accuracy <i class="fa fa-dot-circle-o"></i></p>
                     <p class="">{{accuracy}} %</p>
                   </div>
                 </div>
