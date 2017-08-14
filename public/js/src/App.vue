@@ -98,7 +98,7 @@
       },
       fetchExcerpt: function () {
         const $this = this;
-        axios.get('/excerpt')
+        axios.get('/book')
           .then((response) => {
               $this.chars   = response.data.letters;
               $this.length  = response.data.length;
