@@ -25,7 +25,7 @@ Schema.statics.random = function(cb) {
 
 // Finds the 'next excerpt'
 Schema.methods.next = function(cb) {
-  var model = this.model("Quote");
+  var model = this.model("Book");
   model.findOne().where('_id').gt(this._id).exec(function(err, excerpt) {
     if (err) {
       throw err;
@@ -40,8 +40,8 @@ Schema.methods.next = function(cb) {
   });
 };
 
-var Excerpt = mongoose.model('Excerpt', Schema);
+var Book = mongoose.model('Book', Schema);
 
 module.exports.get = function(cb) {
-  Excerpt.random(cb);
+  Book.random(cb);
 };
