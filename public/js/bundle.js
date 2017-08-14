@@ -9353,8 +9353,8 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12"},[_c('div',{staticClass:"excerpt-container",on:{"click":_vm.returnFocus}},[_c('box',{attrs:{"letters":_vm.chars,"status":_vm.status,"focusIn":_vm.hasFocus,"wordCount":_vm.wordCount,"letterCount":_vm.charAt}}),_vm._v(" "),_c('input',{ref:"textarea",staticClass:"textarea",attrs:{"autofocus":""},on:{"keypress":_vm.onKeyPress,"focusout":_vm.onFocusOut,"focusin":_vm.onFocusIn}}),_vm._v(" "),(_vm.finished)?_c('div',{staticClass:"stats-overlay"},[_c('div',{staticClass:"text"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-sm-4"},[_vm._m(0),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.wpm))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(1),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.timeReport))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(2),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.accuracy)+" %")])])])])]):_vm._e()],1),_vm._v(" "),_c('div',{staticClass:"button-container"},[_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"reset"},on:{"click":_vm.reset}},[_c('i',{staticClass:"fa fa-arrow-left"})]),_vm._v(" "),_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"Load new excerpt"},on:{"click":_vm.fetchExcerpt}},[_c('i',{staticClass:"fa fa-refresh"})])]),_vm._v(" "),_c('book',{attrs:{"title":_vm.title,"url":_vm.url,"image":_vm.image,"promo":_vm.promo,"author":_vm.author}})],1)])])])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("WPM "),_c('i',{staticClass:"fa fa-check-square-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Time "),_c('i',{staticClass:"fa fa-clock-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Accuracy "),_c('i',{staticClass:"fa fa-dot-circle-o"})])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"excerpt-container",on:{"click":_vm.returnFocus}},[_c('box',{attrs:{"letters":_vm.chars,"status":_vm.status,"focusIn":_vm.hasFocus,"wordCount":_vm.wordCount,"letterCount":_vm.charAt}}),_vm._v(" "),_c('input',{ref:"textarea",staticClass:"textarea",attrs:{"autofocus":""},on:{"keypress":_vm.onKeyPress,"focusout":_vm.onFocusOut,"focusin":_vm.onFocusIn}}),_vm._v(" "),(_vm.finished)?_c('div',{staticClass:"stats-overlay"},[_c('div',{staticClass:"text"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-sm-4"},[_vm._m(1),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.wpm))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(2),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.timeReport))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(3),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.accuracy)+" %")])])])])]):_vm._e()],1),_vm._v(" "),_c('div',{staticClass:"button-container"},[_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"reset"},on:{"click":_vm.reset}},[_c('i',{staticClass:"fa fa-arrow-left"})]),_vm._v(" "),_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"Load new excerpt"},on:{"click":_vm.fetchExcerpt}},[_c('i',{staticClass:"fa fa-refresh"})])]),_vm._v(" "),_c('book',{attrs:{"title":_vm.title,"url":_vm.url,"image":_vm.image,"promo":_vm.promo,"author":_vm.author}})],1)])])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('h2',{staticClass:"slogan"},[_vm._v("Stimulate your brain while you improve your typing skills.")])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("WPM "),_c('i',{staticClass:"fa fa-check-square-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Time "),_c('i',{staticClass:"fa fa-clock-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Accuracy "),_c('i',{staticClass:"fa fa-dot-circle-o"})])}]
 __vue__options__._scopeId = "data-v-77e02964"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -9363,7 +9363,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-77e02964", __vue__options__)
   } else {
-    hotAPI.reload("data-v-77e02964", __vue__options__)
+    hotAPI.rerender("data-v-77e02964", __vue__options__)
   }
 })()}
 
@@ -9413,7 +9413,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-257f70c5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-257f70c5", __vue__options__)
+    hotAPI.rerender("data-v-257f70c5", __vue__options__)
   }
 })()}
 
@@ -9475,7 +9475,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-a1f5aac2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-a1f5aac2", __vue__options__)
+    hotAPI.rerender("data-v-a1f5aac2", __vue__options__)
   }
 })()}
 
