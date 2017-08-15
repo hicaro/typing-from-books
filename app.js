@@ -14,7 +14,7 @@ var port = process.env.PORT || 3000;
 var parseUrlEncoded = bodyParser.urlencoded({ extended: false });
 
 // add gzip compression
-app.use(compression);
+app.use(compression());
 
 // set the view engine to ejs
 //app.set('view engine', 'ejs');
