@@ -1,17 +1,37 @@
-var express = require('express'),
-  router = express.Router();
+var express     = require('express');
+var router      = express.Router();
+var bodyParser  = require('body-parser');
+var Excerpt     = require('../models/excerpt');
+
+router.use(bodyParser.urlencoded({extended: true}));
 
 router.get('/', function(req, res){
-  var text = "Mom pointed her chopsticks at me. \"You see?\" she said. \"Right there. That's exactly what I am saying. You're way too easily embaressed. Your father and I are who we are. Accept it.\"";
+  Excerpt.get(function(err, excerpt) {
+    if(err) {
+      var text = "Across the courtesy bay the white palaces of fashionable East Egg glittered along the water, and the history of the summer really begins on the evening I drove over there to have dinner with the Tom Bachanans.";
+      return res.json({
+        letters: text.split(''),
+        length: text.length,
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        url: "https://www.amazon.com/Great-Gatsby-F-Scott-Fitzgerald/dp/0743273567/ref=as_li_ss_il?_encoding=UTF8&psc=1&refRID=CXJPEVCD4ZM2ANRX4MQ5&linkCode=li3&tag=typingfromboo-20&linkId=114cc2ff0acc1cbce3205e0aae8fbb0a",
+        image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0743273567&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=typingfromboo-20",
+        promo: "The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted \"gin was the national drink and sex the national obsession,\" it is an exquisitely crafted tale of America in the 1920s."
+      });
+    }
 
-  res.json({
-    letters: text.split(''),
-    length: text.length,
-    title: "The Glass Castle: A Memoir by Jeannette Walls",
-    url: "https://www.amazon.com/gp/product/074324754X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=074324754X&linkCode=as2&tag=typingfromboo-20&linkId=ff3b2085c2d8df451982e6978c5fa225",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=074324754X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=typingfromboo-20",
-    promo: "The perennially bestselling, extraordinary, one-of-a-kind, \"nothing short of spectacular\" (Entertainment Weekly) memoir from one of the world’s most gifted storytellers."
+    res.json({
+      letters: excerpt.text.split(''),
+      length: excerpt.text.length,
+      title: excerpt.title,
+      author: excerpt.author,
+      url: excerpt.url,
+      image: excerpt.image,
+      promo: excerpt.promo
+    });
   });
+
+
 });
 
 module.exports = router;

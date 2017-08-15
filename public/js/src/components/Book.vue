@@ -1,15 +1,24 @@
 <template>
-  <div class="book-container">
-    <img alt="" :src="image" />
-    <a target="_blank" :href="url">{{title}}</a>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <q>
-          {{promo}}
-        </q>
+
+    <div class="book-container">
+
+      <a target="_blank" :href="url">
+        <img alt="" :src="image" />
+      </a>
+
+      <div class="book-details">
+
+        <h2 class="title"><a target="_blank" :href="url">{{title}} by {{author}}</a></h2>
+
+        <div class="book-text">
+          <p>
+            {{promo}}
+          </p>
+          <a class="amazon" target="_blank" :href="url">Check Book Now</i></a>
+        </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -17,6 +26,10 @@
     name: 'book',
     props: {
       title: {
+        type: String,
+        default: ""
+      },
+      author: {
         type: String,
         default: ""
       },

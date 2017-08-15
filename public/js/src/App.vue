@@ -2,11 +2,7 @@
   <div id="app">
     <div class="container" >
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <h1>Typing From Books</h1>
-          <p>
-             Learn new facts and make your ming wander while practicing your typing!
-          </p>
+        <div class="col-md-12">
 
           <div @click="returnFocus" class="excerpt-container">
 
@@ -16,32 +12,33 @@
             <div class="stats-overlay" v-if="finished">
               <div class="text">
                 <div class="row">
-                  <div class="col-md-4">
-                    <p class="">WPM</p>
+                  <div class="col-sm-4">
+                    <p class="">WPM <i class="fa fa-check-square-o"></i></p>
                     <p class="">{{wpm}}</p>
                   </div>
-                  <div class="col-md-4">
-                    <p class="">Time</p>
+                  <div class="col-sm-4">
+                    <p class="">Time <i class="fa fa-clock-o"></i></p>
                     <p class="">{{timeReport}}</p>
                   </div>
-                  <div class="col-md-4">
-                    <p class="">Accuracy</p>
+                  <div class="col-sm-4">
+                    <p class="">Accuracy <i class="fa fa-dot-circle-o"></i></p>
                     <p class="">{{accuracy}} %</p>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
 
-          <div class="row">
-            <button class="btn btn-primary pull-right" @click="fetchExcerpt">Practice new excerpt</button>
-            <button class="btn btn-primary pull-right" @click="reset">Reset</button>
+          <div class="button-container">
+            <button title="reset" class="btn btn-default btn-circle btn-lg waves-effect" @click="reset">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <button title="Load new excerpt" class="btn btn-default btn-circle btn-lg waves-effect" @click="fetchExcerpt">
+              <i class="fa fa-refresh"></i>
+            </button>
           </div>
 
-          <div class="row">
-            <book :title="title" :url="url" :image="image" :promo="promo"></book>
-          </div>
+          <book :title="title" :url="url" :image="image" :promo="promo" :author="author"></book>
         </div>
       </div>
     </div>
@@ -63,7 +60,7 @@
       return {
         chars: [],
         length: 0,
-        status: [], // has type status for each letter
+        status: [], // has typing status for each letter
         wordCount: 0,
         charAt: 0,
         startTime: 0,
@@ -76,7 +73,8 @@
         title: "",
         url: "",
         image: "",
-        promo: ""
+        promo: "",
+        author: ""
       }
     },
     computed: {
@@ -100,12 +98,13 @@
       },
       fetchExcerpt: function () {
         const $this = this;
-        axios.get('/excerpt')
+        axios.get('/book')
           .then((response) => {
               $this.chars   = response.data.letters;
               $this.length  = response.data.length;
 
               $this.title   = response.data.title;
+              $this.author  = response.data.author;
               $this.url     = response.data.url;
               $this.image   = response.data.image;
               $this.promo   = response.data.promo;
@@ -117,6 +116,7 @@
           });
       },
       onKeyPress: function (event) {
+
         let id = this.charAt;
         let element = document.getElementById(id);
 
@@ -182,20 +182,4 @@
   }
 </script>
 
-<style scoped>
-  #app {
-    height: 100vh;
-    width: 100vw;
-    background-color: #f8f8f8;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  h1{
-    text-align: center;
-  }
-  p{
-    text-align: center;
-  }
-</style>
+<style scoped></style>

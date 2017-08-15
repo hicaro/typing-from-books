@@ -1,27 +1,101 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #f6f9f8;
+  font-family: 'Lato', sans-serif;
+}
+
+#app {
+  height: auto;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: 26px;
+  padding: 93px 0 41px;
+  display: block;
+}
+
+.header .logo {
+  position: relative;
+  text-align: center;
+}
+
+.header .logo span {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.header .logo span::before, .header .logo span::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  height: 20px;
+  border: 3px solid #000;
+}
+
+.header .logo span::before {
+  top: -42px;
+  border-bottom: 0;
+}
+
+.header .logo span::after {
+  bottom: -82px;
+  border-top: 0px;
+}
+
+.header .logo p {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.header .logo a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  letter-spacing: 4px;
+  text-decoration: none;
+  -webkit-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+
+.header .logo b {
+  font-size: 30px;
+  text-transform: uppercase;
+}
 
 .frame {
-    font-family: 'Courier';
-    background-color: rgb(238,255,65);
-    background-color: rgba(238,255,65,.4);
-    border: 1px solid #cccfa0;
-    white-space: pre-wrap;
-    padding: 4px;
-    position: relative;
-    border-radius: 5px;
-    min-height: 150px;
-    margin-top: 40px;
-    font-size: 1.25em;
-    overflow: hidden;
-    -moz-appearance: textfield-multiline;
-    -webkit-appearance: textarea;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 300;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,1);
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  padding: 20px;
+  position: relative;
+  border-radius: 1px;
+  min-height: 200px;
+  font-size: 1.5em;
+  overflow: hidden;
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
 }
 
-.frame div {
-  display: inline-block;
-}
-
-.frame div span {
-  display: inline-block;
+.frame span {
+  color: #000;
 }
 
 .textarea {
@@ -34,15 +108,16 @@
 }
 
 .correct {
-    color: #20a080;
+    color: #20a080 !important;
 }
 
-.error{
-    color: red;
+.error {
+    color: red !important;
 }
 
 .empty-error {
-  background-color: red;
+  background-color: rgb(255,0,0);
+  background-color: rgba(255,0,0,.4);
 }
 
 .excerpt-container {
@@ -59,18 +134,20 @@
   right: 0;
   bottom: 0;
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  background-color: rgba(0,0,0,0.9); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   border-radius: 5px;
 }
 
 .stats-overlay .text {
-  position: absolute;
+  position: relative;
+  width: 100%;
   top: 50%;
   left: 50%;
   font-size: 20px;
   color: white;
+  font-family: 'Changa One', cursive;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -82,22 +159,150 @@
   text-align: center;
 }
 
+.button-container {
+  position: relative;
+  margin-top: 1px;
+  text-align: right;
+  z-index: 5;
+  margin-top: -40px;
+}
+
+.button-container button {
+  display: inline-block;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 12px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
 button {
   margin: 15px;
   margin-left: 0;
 }
 
 .book-container {
-  text-align: center;
-  margin-top: 50px;
+  padding: 47px 99px 37px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  margin-top: 30px
 }
 
 .book-container img {
-  display: block;
-  margin: 0 auto;
+  float: left;
+  max-width: 70%;
+  margin-right: 55px;
+  margin-bottom: 10px;
+  border: 0 none;
 }
 
-.book-container a {
-  display: block;
-  margin: 15px;
+.book-container .book-details {
+  margin-top: 35px;
+}
+
+.book-details .title {
+  font-size: 24px;
+  line-height: 1.33em;
+  margin-top: 0;
+}
+
+.book-details .book-text {
+  position: relative;
+  margin-top: 52px;
+  padding: 0 308px 0 0;
+  font-size: 16px
+}
+
+.book-details .amazon {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  min-width: 270px;
+  margin-bottom: 10px;
+  height: 60px;
+  line-height: 56px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  padding: 0 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+
+.book-details .amazon::after {
+  padding-left: 21px;
+  font-size: 18px;
+  content: '\f061';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.book-details .amazon:hover {
+  background: #f2ca68;
+  color: #000;
+  border-color: #f2ca68;
+  text-decoration: none;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.copyright p {
+  font-weight: normal;
+  margin: 20px 20px 10px 0;
+}
+
+.copyright img {
+  position: relative;
+  margin: 0px 4px;
+  width: 10px;
+}
+
+.copyright a {
+  font-weight: 700;
+  text-decoration: none;
 }
