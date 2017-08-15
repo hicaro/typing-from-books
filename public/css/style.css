@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   background-color: #f6f9f8;
+  font-family: 'Lato', sans-serif;
 }
 
 #app {
@@ -16,141 +17,68 @@ html, body {
 }
 
 .header {
-  background: #fff;
-  min-height: 85px;
-  border-bottom: 1px solid #c6c6c6;
-  -moz-box-shadow: 0 1px 3px #e5e5e4;
-  -webkit-box-shadow: 0 1px 3px #e5e5e4;
-  box-shadow: 0 1px 3px #e5e5e4;
-}
-
-.header .header-content .header-title-content {
-  padding: 12px 2px;
-  font-weight: 400;
-  overflow: hidden;
-}
-
-.header .site-logo {
-  width: 100px;
-  height: 97px;
-  display: inline-block;
-}
-
-.header .site-logo a {
-  text-decoration: none;
-  color: #434B56;
-  overflow: hidden;
+  margin-bottom: 26px;
+  padding: 93px 0 41px;
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
-.header .site-logo a:focus, .header .site-logo a:visited {
-  text-decoration: none;
-}
-
-.header .site-logo img {
-  border: none;
-  opacity: .5;
-}
-
-.header .site-title {
-  display: inline-block;
-  width: 70%;
-  padding-left: 10px;
-  vertical-align: top;
-  font-family: 'Changa One', cursive;
-}
-
-.header .site-title h1 {
-  color: #e7492f;
-  font-size: 35px;
-  margin: 20px 0 0 0;
-}
-
-.header .site-title h3 {
-  font-size: 18px;
-  color: #444;
-  margin: 5px 0 0 1px;
-  font-weight: 300;
-}
-
-.header .access-content {
-  padding: 35px 0 15px;
-}
-
-.header .access-content ul {
-  list-style: none;
-}
-
-.header .access-content li {
-  float: left;
+.header .logo {
   position: relative;
-  margin-right: 5px;
-}
-
-.header .access-content li a {
-  padding: 7px 10px;
-  text-decoration: none;
-}
-
-.header .access-content li.current-item a {
-  background-color: rgb(51, 122, 183);
-  background-color: rgba(51, 122, 183, 1);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  color: #fff;
-}
-
-.header .access-content li a:hover {
-  background-color: rgb(238, 238, 238);
-  background-color: rgba(238, 238, 238, 1);
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  color: #434B56;
-}
-
-.header .member {
-  text-align: right;
-  margin-top: 30px;
-}
-
-.header .member span a {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  display: block;
-  font-size: 13px;
-  float: right;
-  background: #7a7f88;
-  color: #fff;
-  cursor: pointer;
-  margin-left: 10px;
-  padding: 7px 10px;
-  text-decoration: none;
-}
-
-.header .member span a:hover {
-  background-color: rgb(238, 238, 238);
-  background-color: rgba(238, 238, 238, 1);
-  color: #434B56;
-}
-
-.slogan {
-  font-family: 'Saira', sans-serif;
   text-align: center;
-  font-size: 28px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-weight: 300;
+}
+
+.header .logo span {
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.header .logo span::before, .header .logo span::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  height: 20px;
+  border: 3px solid #000;
+}
+
+.header .logo span::before {
+  top: -42px;
+  border-bottom: 0;
+}
+
+.header .logo span::after {
+  bottom: -82px;
+  border-top: 0px;
+}
+
+.header .logo p {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
   font-style: italic;
-  color: #e7492f;
+}
+
+.header .logo a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  letter-spacing: 4px;
+  text-decoration: none;
+  -webkit-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+
+.header .logo b {
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 .frame {
-  font-family: 'Saira', sans-serif;
+  font-family: 'Josefin Slab', serif;
   font-weight: 300;
   background-color: rgb(255,255,255);
   background-color: rgba(255,255,255,1);
@@ -158,8 +86,8 @@ html, body {
   white-space: pre-wrap;
   padding: 20px;
   position: relative;
-  border-radius: 5px;
-  min-height: 150px;
+  border-radius: 1px;
+  min-height: 200px;
   font-size: 1.5em;
   overflow: hidden;
   -moz-appearance: textfield-multiline;
@@ -277,122 +205,84 @@ button {
 }
 
 .book-container {
-  text-align: center;
-  margin: 50px auto;
+  padding: 47px 99px 37px;
+  overflow: hidden;
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  margin-top: 30px
+}
+
+.book-container img {
+  float: left;
+  max-width: 70%;
+  margin-right: 55px;
+  margin-bottom: 10px;
+  border: 0 none;
 }
 
 .book-container .book-details {
-  border: solid 1px #CCC;
-  padding: 10px 20px 10px 10px;
+  margin-top: 35px;
 }
 
-.book-container .book-details .book-thumb {
-  float: left;
-  width: 30%;
+.book-details .title {
+  font-size: 24px;
+  line-height: 1.33em;
+  margin-top: 0;
 }
 
-.book-container .book-details .book-thumb a {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.book-container .book-details .book-thumb a img {
-  float: left;
-  width: 100%;
-}
-
-.book-container .book-details .book-text {
-  float: right;
-  width: 70%;
-  padding-left: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.book-container .book-text a {
-  color: #e7492f;
-}
-
-.book-container .book-details .book-text h2 {
-  color: #262626;
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: inherit;
-  line-height: 26px;
-  text-overflow: ellipsis;
-  margin: 10px 0 10px 0;
-}
-
-.book-container .book-details .book-text h4 {
-  line-height: 1.2;
-  font-size: 16px;
-  margin: 0 0 10px;
-  clear: none;
-  color: #262626;
-  font-weight: 400;
-  font-variant: small-caps;
-}
-
-.book-container .book-details .book-text p::first-letter {
-  text-transform: uppercase;
-}
-
-.book-container .book-details .book-text p {
-  color: #424242;
-  font-family: Georgia, Garamond, Times, serif;
-  letter-spacing:0.1em;
-  text-align:center;
-  margin: 10px auto;
-  line-height: 115%;
-  font-size: 13px;
-}
-
-.book-container .book-details .amazon {
-  float: left;
-  width: 100%;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.book-container .book-details .amazon h3 {
-  float: left;
-  font-size: 20px;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.book-container .book-details .amazon a {
-    text-align: center;
-    color: #333;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.book-container .book-details .block-quote {
-  margin: 0;
-  font-weight: 300;
-  padding-left: 20px;
+.book-details .book-text {
   position: relative;
-  text-align: left;
-  line-height: 28px;
-  font-size: 18px;
+  margin-top: 52px;
+  padding: 0 308px 0 0;
+  font-size: 16px
 }
 
-.book-container .book-details .block-quote:before {
-  font: normal normal normal 24px/1 FontAwesome;
+.book-details .amazon {
   position: absolute;
-  left: 2px;
   right: 0;
-  display: inline-block;
-  text-align: left;
-  content: "\201c";
-  font-size: 50px;
-  line-height: 57px;
-  color: rgb(213, 214, 214);
-  color: rgba(213, 214, 214, 0.8);
+  top: 30px;
+  min-width: 270px;
+  margin-bottom: 10px;
+  height: 60px;
+  line-height: 56px;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  padding: 0 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid #000;
+  color: #000;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
 }
 
-.love {
+.book-details .amazon::after {
+  padding-left: 21px;
+  font-size: 18px;
+  content: '\f061';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.book-details .amazon:hover {
+  background: #f2ca68;
+  color: #000;
+  border-color: #f2ca68;
+  text-decoration: none;
+}
+
+.copyright {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -401,19 +291,18 @@ button {
   font-weight: normal;
 }
 
-.love p {
+.copyright p {
   font-weight: normal;
-  font-family: 'Open Sans', sans-serif;
   margin: 20px 20px 10px 0;
 }
 
-.love img {
+.copyright img {
   position: relative;
   margin: 0px 4px;
   width: 10px;
 }
 
-.love a {
+.copyright a {
   font-weight: 700;
   text-decoration: none;
 }

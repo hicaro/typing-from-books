@@ -1,32 +1,24 @@
 <template>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="book-container">
-        <div class="book-details">
 
-          <div class="book-thumb">
-            <a target="_blank" :href="url">
-              <img alt="" :src="image" />
-            </a>
-          </div>
+    <div class="book-container">
 
-          <div class="book-text">
+      <a target="_blank" :href="url">
+        <img alt="" :src="image" />
+      </a>
 
-            <h2><a target="_blank" :href="url">{{title}}</a></h2>
-            <h4>{{author}}</h4>
-            <p>
-              {{promo}}
-            </p>
-            <div class="amazon">
-              <a target="_blank" :href="url">See Book</a>
-            </div>
-          </div>
+      <div class="book-details">
 
-          <div class="clearfix"></div>
+        <h2 class="title"><a target="_blank" :href="url">{{title}} by {{author}}</a></h2>
+
+        <div class="book-text">
+          <p>
+            {{promo}}
+          </p>
+          <a class="amazon" target="_blank" :href="url">Check Book Now</i></a>
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>

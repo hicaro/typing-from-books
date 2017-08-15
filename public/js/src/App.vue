@@ -4,10 +4,6 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="row">
-            <h2 class="slogan">Stimulate your brain while you improve your typing skills.</h2>
-          </div>
-
           <div @click="returnFocus" class="excerpt-container">
 
             <box :letters="chars" :status="status" :focusIn="hasFocus" :wordCount="wordCount" :letterCount="charAt"></box>
