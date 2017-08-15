@@ -205,7 +205,7 @@ button {
 }
 
 .book-container {
-  padding: 47px 99px 37px;
+  padding: 30px 80px;
   overflow: hidden;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -221,34 +221,34 @@ button {
   border: 0 none;
 }
 
-.book-container .book-details {
-  margin-top: 35px;
-}
-
-.book-details .title {
+.book-container .title {
   font-size: 24px;
   line-height: 1.33em;
   margin-top: 0;
 }
 
-.book-details .book-text {
+.book-container .book-text {
   position: relative;
-  margin-top: 52px;
-  padding: 0 308px 0 0;
+  margin-top: 20px;
+  padding: 0;
   font-size: 16px
 }
 
-.book-details .amazon {
-  position: absolute;
-  right: 0;
-  top: 30px;
-  min-width: 270px;
+.book-container .book-button {
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.book-container .amazon {
+  position: relative;
+  min-width: 200px;
   margin-bottom: 10px;
   height: 60px;
   line-height: 56px;
   font-size: 16px;
   letter-spacing: 0.6px;
-  padding: 0 33px;
+  padding: 10px;
   font-weight: 700;
   text-transform: uppercase;
   background: none;
@@ -266,7 +266,7 @@ button {
   transition: background 0.3s ease-in-out,border-color 0.3s ease-in-out,color 0.3s ease-in-out;
 }
 
-.book-details .amazon::after {
+.book-container .amazon::after {
   padding-left: 21px;
   font-size: 18px;
   content: '\f061';
@@ -275,7 +275,7 @@ button {
   font-style: normal;
 }
 
-.book-details .amazon:hover {
+.book-container .amazon:hover {
   background: #f2ca68;
   color: #000;
   border-color: #f2ca68;
