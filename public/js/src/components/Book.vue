@@ -2,12 +2,12 @@
 
     <div class="book-container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
           <a target="_blank" :href="url">
             <img alt="" :src="image" />
           </a>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-9">
           <h2 class="title"><a target="_blank" :href="url">{{title}} by {{author}}</a></h2>
 
           <div class="book-text">
