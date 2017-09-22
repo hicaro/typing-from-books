@@ -9275,7 +9275,7 @@ exports.default = {
       var _this = this;
 
       var $this = this;
-      _axios2.default.get('/excerpt').then(function (response) {
+      _axios2.default.get('/book').then(function (response) {
         $this.chars = response.data.letters;
         $this.length = response.data.length;
 
@@ -9355,15 +9355,15 @@ var __vue__options__ = (typeof module.exports === "function"? module.exports.opt
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-12"},[_c('div',{staticClass:"excerpt-container",on:{"click":_vm.returnFocus}},[_c('box',{attrs:{"letters":_vm.chars,"status":_vm.status,"focusIn":_vm.hasFocus,"wordCount":_vm.wordCount,"letterCount":_vm.charAt}}),_vm._v(" "),_c('input',{ref:"textarea",staticClass:"textarea",attrs:{"autofocus":""},on:{"keypress":_vm.onKeyPress,"focusout":_vm.onFocusOut,"focusin":_vm.onFocusIn}}),_vm._v(" "),(_vm.finished)?_c('div',{staticClass:"stats-overlay"},[_c('div',{staticClass:"text"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-sm-4"},[_vm._m(0),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.wpm))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(1),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.timeReport))])]),_vm._v(" "),_c('div',{staticClass:"col-sm-4"},[_vm._m(2),_vm._v(" "),_c('p',{},[_vm._v(_vm._s(_vm.accuracy)+" %")])])])])]):_vm._e()],1),_vm._v(" "),_c('div',{staticClass:"button-container"},[_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"reset"},on:{"click":_vm.reset}},[_c('i',{staticClass:"fa fa-arrow-left"})]),_vm._v(" "),_c('button',{staticClass:"btn btn-default btn-circle btn-lg waves-effect",attrs:{"title":"Load new excerpt"},on:{"click":_vm.fetchExcerpt}},[_c('i',{staticClass:"fa fa-refresh"})])]),_vm._v(" "),_c('book',{attrs:{"title":_vm.title,"url":_vm.url,"image":_vm.image,"promo":_vm.promo,"author":_vm.author}})],1)])])])}
 __vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("WPM "),_c('i',{staticClass:"fa fa-check-square-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Time "),_c('i',{staticClass:"fa fa-clock-o"})])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{},[_vm._v("Accuracy "),_c('i',{staticClass:"fa fa-dot-circle-o"})])}]
-__vue__options__._scopeId = "data-v-c826d5ae"
+__vue__options__._scopeId = "data-v-77e02964"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-c826d5ae", __vue__options__)
+    hotAPI.createRecord("data-v-77e02964", __vue__options__)
   } else {
-    hotAPI.reload("data-v-c826d5ae", __vue__options__)
+    hotAPI.rerender("data-v-77e02964", __vue__options__)
   }
 })()}
 
@@ -9403,17 +9403,17 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6 col-md-offset-3"},[_c('div',{staticClass:"book-container"},[_c('div',{staticClass:"book-details"},[_c('div',{staticClass:"book-thumb"},[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_c('img',{attrs:{"alt":"","src":_vm.image}})])]),_vm._v(" "),_c('div',{staticClass:"book-text"},[_c('h2',[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_vm._v(_vm._s(_vm.title))])]),_vm._v(" "),_c('h4',[_vm._v(_vm._s(_vm.author))]),_vm._v(" "),_c('p',[_vm._v("\n            "+_vm._s(_vm.promo)+"\n          ")]),_vm._v(" "),_c('div',{staticClass:"amazon"},[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_vm._v("See Book")])])]),_vm._v(" "),_c('div',{staticClass:"clearfix"})])])])])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"book-container"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-lg-3"},[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_c('img',{attrs:{"alt":"","src":_vm.image}})])]),_vm._v(" "),_c('div',{staticClass:"col-lg-9"},[_c('h2',{staticClass:"title"},[_c('a',{attrs:{"target":"_blank","href":_vm.url}},[_vm._v(_vm._s(_vm.title)+" by "+_vm._s(_vm.author))])]),_vm._v(" "),_c('div',{staticClass:"book-text"},[_c('p',[_vm._v("\n          "+_vm._s(_vm.promo)+"\n        ")])]),_vm._v(" "),_c('div',{staticClass:"book-button"},[_c('a',{staticClass:"amazon",attrs:{"target":"_blank","href":_vm.url}},[_vm._v("Check Book")])])])])])}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-13c23f92"
+__vue__options__._scopeId = "data-v-257f70c5"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-13c23f92", __vue__options__)
+    hotAPI.createRecord("data-v-257f70c5", __vue__options__)
   } else {
-    hotAPI.reload("data-v-13c23f92", __vue__options__)
+    hotAPI.rerender("data-v-257f70c5", __vue__options__)
   }
 })()}
 
@@ -9467,15 +9467,15 @@ __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createEle
                       error: _vm.letterCount > lc && !_vm.status[lc],
                       'empty-error': _vm.letterCount > lc && !_vm.status[lc] && _vm.isSpace(letter)},attrs:{"id":lc}},[_vm._v(_vm._s(letter))])}))}
 __vue__options__.staticRenderFns = []
-__vue__options__._scopeId = "data-v-39e104ed"
+__vue__options__._scopeId = "data-v-a1f5aac2"
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-39e104ed", __vue__options__)
+    hotAPI.createRecord("data-v-a1f5aac2", __vue__options__)
   } else {
-    hotAPI.reload("data-v-39e104ed", __vue__options__)
+    hotAPI.rerender("data-v-a1f5aac2", __vue__options__)
   }
 })()}
 

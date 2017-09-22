@@ -1,6 +1,7 @@
-var express = require('express'),
-  path = require('path'),
-  bodyParser = require('body-parser');
+var express     = require('express');
+var path        = require('path');
+var bodyParser  = require('body-parser');
+var compression = require('compression');
 
 // create an express instance
 var app = express();
@@ -11,6 +12,9 @@ var port = process.env.PORT || 3000;
 
 // create an urlencoded parser
 var parseUrlEncoded = bodyParser.urlencoded({ extended: false });
+
+// add gzip compression
+app.use(compression());
 
 // set the view engine to ejs
 //app.set('view engine', 'ejs');

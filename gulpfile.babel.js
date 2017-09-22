@@ -1,6 +1,9 @@
 "use strict";
 
 import gulp from "gulp";
+import concat from "gulp-concat";
+import minifyCSS from "gulp-minify-css";
+import autoprefixer from "gulp-autoprefixer";
 import browserify from "browserify";
 import envify from "envify";
 import source from "vinyl-source-stream";
@@ -54,4 +57,13 @@ gulp.task('lint', () => {
 
 gulp.task('watch', ['transpile'], () => {
   gulp.watch('public/js/src/**/*', ['transpile']);
+  gulp.watch('public/css/*.css', ['css']);
+});
+
+gulp.task('css', () => {
+  gulp.src('public/css/*.css')
+    .pipe(minifyCSS())
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('public/css/dist'));
 });
